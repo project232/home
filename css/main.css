@@ -1,0 +1,158 @@
+ /* Reset some default styles for better consistency */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the header */
+.head {
+    background-color: rgb(16, 101, 154);
+    color: white;
+    padding: 10px 0;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #21241f; /* Change the color on hover */
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: none; /* Initially hidden on larger screens */
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: background-color 0.3s;
+}
+
+/* Show menu when expanded class is added */
+.expanded .nav {
+    display: block;
+}
+
+/* Style the expanded menu */
+.expanded .menu-icon div {
+    background-color: #ff5733; /* Change color when menu is expanded */
+}
+
+/* Media query for responsive design */
+
+.foot{
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+   background-color:#333;
+  
+}
+.foot-text {
+    color: white; /* Change this to the color you want */
+    text-align: center;
+}
+.card-top{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    display: inline-table;
+}
+@media (max-width: 1200px) {
+    /* Adjust styles for smaller screens */
+    .nav {
+        display: none; /* Hide the navigation links */
+        flex-direction: column; /* Stack the links vertically */
+        text-align: center;
+        background-color: rgb(16, 101, 154);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+    }
+
+    .expanded .nav {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger menu icon */
+    }
+
+    .content {
+        display: block; /* Allow content to stack on smaller screens */
+    }
+
+    /* Additional responsive styles can be added here */
+    .head {
+        padding: 5px 0; /* Reduce header padding for smaller screens */
+    }
+
+    .nav li {
+        margin: 10px 0; /* Increase margin between navigation items */
+    }
+
+    .foot {
+        height: auto; /* Adjust footer height based on content */
+    }
+
+    .foot-text {
+        font-size: 12px; /* Adjust the font size in the footer */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .carousel-inner {
+        max-width: 100%; /* Ensure images in the carousel fit the screen */
+    }
+
+    .carousel-item {
+        max-height: 300px; /* Limit the height of carousel items */
+    }
+
+    .card-top {
+        flex-direction: column; /* Stack teacher cards vertically */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+
+    .about h1 {
+        font-size: 18px; /* Adjust the heading size */
+    }
+}
+
+
